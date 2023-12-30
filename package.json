@@ -1,0 +1,19 @@
+{
+  "name": "faq-accordion",
+  "version": "1.0.0",
+  "description": "faq accordaion",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "sabbir ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.10.3",
+    "sass": "^1.69.5"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3"
+  }
+}

@@ -1,0 +1,128 @@
+$color-White: hsl(0, 0%, 100%);
+$color-Light-pink: hsl(275, 100%, 97%);
+$color-Grayish-purple: hsl(292, 16%, 49%);
+$color-Grayish: #868e96;
+$color-Dark-purple: hsl(292, 42%, 14%);
+
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  max-width: 144rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  background-color: $color-Light-pink;
+  height: 100vh;
+  min-height: calc(100vh - 2 * 4vw);
+  background-image: url("../images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain, cover;
+
+  @media only screen and (max-width: $bp-small) {
+    background-image: url("../images/background-pattern-mobile.svg");
+  }
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.faq-container {
+  width: 55rem;
+  height: auto;
+  background-color: $color-White;
+  border-radius: 9px;
+  overflow: hidden;
+  transform: scale(1.01);
+  box-shadow: 0 1rem 1rem 0.8rem rgba($color-Grayish-purple, 0.9);
+  padding: 2rem;
+}
+
+.faq-header {
+  display: flex;
+  gap: 1.8rem;
+  margin: 1.8rem 0;
+}
+.heading-primary {
+  font-size: 3.2rem;
+}
+
+.accordin-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.accordin-container:not(:last-child) {
+  border-bottom: 3px solid $color-Light-pink;
+}
+.active {
+  background-color: $color-Light-pink;
+  border-radius: 5px;
+  border-bottom: 0px solid $color-Light-pink;
+}
+.accordin-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.accordin-header:hover {
+  color: $color-Grayish-purple;
+}
+
+.accordin-details {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $color-Grayish;
+  transition: all 0.3s;
+  margin-bottom: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+hr {
+  border-top: 0px solid $color-Light-pink;
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
