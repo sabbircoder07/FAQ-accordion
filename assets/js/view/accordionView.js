@@ -27,7 +27,7 @@ class accordinView {
         .closest(".accordin-header")
         .querySelector(".accordin-header-img");
       // Set all accordion plusIcons
-      console.log(this._accordinHeaderImg);
+      //console.log(this._accordinHeaderImg);
       this._accordinHeaderImg.forEach((img) => (img.src = plusIcons));
       //Set accordion minusIcons acive accordation header
       if (accordationHeaderImage.src.includes("plus")) {
@@ -37,12 +37,14 @@ class accordinView {
       }
 
       // Remove active class for all accordation heaader
-      this._accordinContainer.forEach((accordin) =>
+
+      this._accordinHeader.forEach((accordin) =>
         accordin.classList.remove("active")
       );
+
       //Add active class for active accordation
-      const accordinActive = event.target.closest(".accordin-container");
-      accordinActive.classList.add("active");
+      const accordinheaderActive = event.target.closest(".accordin-header");
+      accordinheaderActive.classList.toggle("active");
 
       //Remove hide class for all accordation details
       this._accordinDetails.forEach((detail) => detail.classList.add("hide"));

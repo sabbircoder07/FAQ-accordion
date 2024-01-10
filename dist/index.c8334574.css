@@ -14,6 +14,12 @@ html {
 
 @media only screen and (width <= 37.5em) {
   html {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (width <= 31.25em) {
+  html {
     font-size: 50%;
   }
 }
@@ -48,14 +54,32 @@ body {
 }
 
 .faq-container {
-  background-color: #fff;
+  background-color: #fafafa;
   border-radius: 9px;
-  width: 55rem;
+  width: 45%;
   height: auto;
   padding: 2rem;
   overflow: hidden;
   transform: scale(1.01);
   box-shadow: 0 1rem 1rem .8rem #8c6991e6;
+}
+
+@media only screen and (width <= 80.2em) {
+  .faq-container {
+    width: 75%;
+  }
+}
+
+@media only screen and (width <= 61.25em) {
+  .faq-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (width <= 54.2em) {
+  .faq-container {
+    width: 90%;
+  }
 }
 
 .faq-header {
@@ -65,60 +89,64 @@ body {
 }
 
 .heading-primary {
-  font-size: 3.2rem;
+  font-size: 3.8rem;
 }
 
 .accordin-container {
   flex-direction: column;
-  padding: 1rem;
+  padding: .5rem 1.4rem;
   display: flex;
 }
 
-.accordin-container:not(:last-child) {
-  border-bottom: 3px solid #f9f0ff;
-}
-
 .active {
-  background-color: #f9f0ff;
-  border-bottom: 0 solid #f9f0ff;
-  border-radius: 5px;
+  border-bottom: none !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 
 .accordin-header {
   cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #dbe5e6;
+  border-radius: 9px;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  align-items: center;
+  padding: .8rem 1.6rem;
   transition: all .5s ease-in-out;
   display: flex;
 }
 
 .accordin-header:hover {
-  color: #8c6991;
+  color: #cc5de8;
 }
 
 .accordin-details {
-  color: #868e96;
-  margin-bottom: 5px;
+  color: #737373;
+  word-break: break-word;
+  background-color: #fff;
+  border: 1px solid #dbe5e6;
+  border-radius: 0 0 9px 9px;
+  width: 100%;
+  padding: 1.4rem;
   font-size: 1.6rem;
   font-weight: 400;
+  line-height: 1.6;
   transition: all .5s ease-in-out;
 }
 
-hr {
-  border-top: 0 solid #f9f0ff;
-}
-
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
 .hide {
+  visibility: hidden;
   opacity: 0;
   display: none;
 }
 
 .show {
+  visibility: show;
   opacity: 1;
   display: block;
 }
